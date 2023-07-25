@@ -3,8 +3,8 @@ import os
 from PIL import Image
 import numpy as np
 
-
-class preprcessInput:
+#removes background and resizes the image
+class preprocessInput:
 
     def __init__(self):
         self.o_width = None
@@ -15,7 +15,7 @@ class preprcessInput:
         self.t_height = None
         self.t_image = None
         self.save_path = None
-
+    #removes background
     def remove_bg(self, file_path:str, api_key='qYVjUusWpt9ew8AUXgAEdsxv'):
         self.save_path = file_path[:-3]+'.png'
         response = requests.post(
@@ -44,7 +44,7 @@ class preprcessInput:
         os.remove(self.save_path)
         # .convert('RGB')
         return np.asarray(self.o_image)
-
+    #preprocess images
     def transform(self, width=768, height=1024):
         newsize = (width, height)
         self.t_height = height
