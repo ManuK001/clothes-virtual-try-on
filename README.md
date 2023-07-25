@@ -40,6 +40,9 @@ https://user-images.githubusercontent.com/63489382/163922795-5dbb0f52-95e4-42c6-
 - Replace the remove.bg api with yours inside `remove_bg.py` where `api = <your api>` inside the function `remove_bg`
 - Run the `C_A_MARK_2.ipynb` and you'll get the link of your server. Make a post request or use our `client-side` folder
 
+## Install the dependencies and Run locally
+
+python /content/clothes-virtual-try-on/run.py
 
 ## Citation
 **Work in progress**
